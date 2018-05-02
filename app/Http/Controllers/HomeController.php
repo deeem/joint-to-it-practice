@@ -40,4 +40,9 @@ class HomeController extends Controller
     {
         return view('admin.navbar');
     }
+
+    public function cards()
+    {
+        return view('admin.cards');
+    }
 }
