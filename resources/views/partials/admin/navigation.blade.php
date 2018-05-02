@@ -19,7 +19,7 @@
         </a>
       </li>
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="{{ route('tables') }}">
           <i class="fa fa-fw fa-table"></i>
           <span class="nav-link-text">Tables</span>
         </a>
@@ -31,7 +31,7 @@
         </a>
         <ul class="sidenav-second-level collapse" id="collapseComponents">
           <li>
-            <a href="navbar.html">Navbar</a>
+            <a href="{{ route('navbar') }}">Navbar</a>
           </li>
           <li>
             <a href="cards.html">Cards</a>

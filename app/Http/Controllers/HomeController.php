@@ -30,4 +30,14 @@ class HomeController extends Controller
     {
         return view('admin.charts');
     }
+
+    public function tables()
+    {
+        return view('admin.tables');
+    }
+
+    public function navbar()
+    {
+        return view('admin.navbar');
+    }
 }
