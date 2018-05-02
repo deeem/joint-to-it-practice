@@ -20,7 +20,7 @@ class RolesSeeder extends Seeder
                 'dashboard' => true,
                 'charts' => true,
                 'components' => true,
-                'table' => true,
+                'tables' => true,
             ]
         ]);
 
