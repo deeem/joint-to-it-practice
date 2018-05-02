@@ -11,5 +11,12 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
+mix.js([
+  'resources/assets/js/app.js',
+  'node_modules/jquery.easing/jquery.easing.js',
+  'node_modules/chart.js/dist/Chart.js',
+  'node_modules/startbootstrap-sb-admin/js/sb-admin-datatables.js',
+  'node_modules/startbootstrap-sb-admin/js/sb-admin-charts.js',
+  'node_modules/startbootstrap-sb-admin/js/sb-admin.js'
+], 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
