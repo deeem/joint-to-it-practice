@@ -17,8 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/charts', 'HomeController@charts')->name('charts');
-Route::get('/tables', 'HomeController@tables')->name('tables');
-Route::get('/navbar', 'HomeController@navbar')->name('navbar');
-Route::get('/cards', 'HomeController@cards')->name('cards');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('can:dashboard');
+Route::get('/charts', 'HomeController@charts')->name('charts')->middleware('can:charts');
+Route::get('/tables', 'HomeController@tables')->name('tables')->middleware('can:tables');
+Route::get('/navbar', 'HomeController@navbar')->name('navbar')->middleware('can:components');
+Route::get('/cards', 'HomeController@cards')->name('cards')->middleware('can:components');

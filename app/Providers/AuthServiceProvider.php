@@ -25,6 +25,24 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Gate::define('map', function ($user) {
+            return $user->hasAccess(['map']);
+        });
+
+        Gate::define('dashboard', function ($user) {
+            return $user->hasAccess(['dashboard']);
+        });
+
+        Gate::define('charts', function ($user) {
+            return $user->hasAccess(['charts']);
+        });
+
+        Gate::define('components', function ($user) {
+            return $user->hasAccess(['components']);
+        });
+
+        Gate::define('tables', function ($user) {
+            return $user->hasAccess(['tables']);
+        });
     }
 }
