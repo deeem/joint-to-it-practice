@@ -12,7 +12,7 @@ class RolesSeeder extends Seeder
      */
     public function run()
     {
-        $superadmin = Role::create([
+        Role::create([
             'name' => 'Super Admin',
             'slug' => 'superadmin',
             'permissions' => [
@@ -24,7 +24,7 @@ class RolesSeeder extends Seeder
             ]
         ]);
 
-        $admin = Role::create([
+        Role::create([
             'name' => 'Admin',
             'slug' => 'admin',
             'permissions' => [
@@ -35,7 +35,7 @@ class RolesSeeder extends Seeder
             ]
         ]);
 
-        $manager = Role::create([
+        Role::create([
             'name' => 'Manager',
             'slug' => 'manager',
             'permissions' => [
@@ -43,7 +43,7 @@ class RolesSeeder extends Seeder
             ]
         ]);
 
-        $user = Role::create([
+        Role::create([
             'name' => 'User',
             'slug' => 'user',
             'permissions' => [
