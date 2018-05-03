@@ -16,20 +16,26 @@
 
 <script>
   function initMap() {
-    var foo = {lat: 50.4297351, lng: 30.4753496};
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 16,
-      center: foo,
-      mapTypeId: 'hybrid'
+      center: {lat: 50.4297351, lng: 30.4753496},
     });
+
+    map.addListener('click', function(e) {
+      placeMarkerAndPanTo(e.latLng, map);
+    });
+  }
+
+  function placeMarkerAndPanTo(latLng, map) {
     var marker = new google.maps.Marker({
-      position: foo,
+      position: latLng,
       map: map
     });
+    map.panTo(latLng);
   }
 </script>
 <script async defer
-src="https://maps.googleapis.com/maps/api/js?key={{ config('map.api.key') }}&callback=initMap">
+src="https://maps.googleapis.com/maps/api/js?key={{ env('MAP_API_KEY') }}&callback=initMap">
 </script>
 
 @endsection
