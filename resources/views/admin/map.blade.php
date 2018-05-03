@@ -14,6 +14,26 @@
 <div class="map" id="map" style="height: 500px; width: 100%;"></div>
 </div>
 
+@if($markers)
+<h3>Saved markers</h3>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th>lat</th>
+      <th>lng</th>
+    </tr>
+  </thead>
+  <tbody>
+  @foreach ($markers as $marker)
+    <tr>
+      <td>{{ $marker->lat }}</td>
+      <td>{{ $marker->lng }}</td>
+    </tr>
+  @endforeach
+  </tbody>
+</table>
+@endif
+
 <script>
   function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
