@@ -20,3 +20,22 @@
 5)- Добавить страницу Map, где у супер админа и админа есть возможность добавлять на Google Map неограниченное количество маркеров по введеному адресу . (Интеграция google maps api)
 
 Результаты выложить на гит-хаб и предоставить логины для всех типов ролей юзеров
+
+## решение
+
+данный репозиторий содержит вариант решения данного задания
+
+### установка
+
+* в .env файле указать данные для подключения к базе
+* в .env файле в переменной MAP_API_KEY указать google map api
+* в .env файле указать логин и пароль maildrop.io
+* composer install 
+* php artisan migrate --seed
+
+#### пользователи
+
+ * роль superadmin, email superadmin@example.org, пароль secret
+ * роль admin, email admin@example.org, пароль secret
+ * роль manager, email manager@example.org, пароль secret
+ * роль user, email user@example.org, пароль secret
