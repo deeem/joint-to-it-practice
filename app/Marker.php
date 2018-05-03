@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Marker extends Model
 {
-    protected $filled = ['lat', 'lng'];
+    protected $guarded = [];
 }

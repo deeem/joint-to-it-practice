@@ -32,6 +32,17 @@
       map: map
     });
     map.panTo(latLng);
+
+    $.ajax({
+      url: '/store-marker',
+      data: {
+        lat: latLng.lat(),
+        lng: latLng.lng()
+      }
+    }).done(function (msg) {
+      console.log("Marker saved");
+    });
+
   }
 </script>
 <script async defer
