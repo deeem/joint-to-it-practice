@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Marker;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -44,5 +45,26 @@ class HomeController extends Controller
     public function cards()
     {
         return view('admin.cards');
+    }
+
+    public function map()
+    {
+        $markers = Marker::all();
+        return view('admin.map', compact('markers'));
+    }
+
+    public function storeMarker(Request $request)
+    {
+        Marker::create([
+            'lat' => $request->lat,
+            'lng' => $request->lng,
+        ]);
+    }
+
+    public function getMarkers()
+    {
+        $markers = Marker::all();
+
+        return response()->json($markers);
     }
 }

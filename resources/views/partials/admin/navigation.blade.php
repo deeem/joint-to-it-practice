@@ -38,6 +38,12 @@
           </li>
         </ul>
       </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+        <a class="nav-link" href="{{ route('map') }}">
+          <i class="fa fa-map"></i>
+          <span class="nav-link-text">Map</span>
+        </a>
+      </li>
     </ul>
     <ul class="navbar-nav sidenav-toggler">
       <li class="nav-item">
