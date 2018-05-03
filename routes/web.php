@@ -22,3 +22,4 @@ Route::get('/charts', 'HomeController@charts')->name('charts')->middleware('can:
 Route::get('/tables', 'HomeController@tables')->name('tables')->middleware('can:tables');
 Route::get('/navbar', 'HomeController@navbar')->name('navbar')->middleware('can:components');
 Route::get('/cards', 'HomeController@cards')->name('cards')->middleware('can:components');
+Route::get('/map', 'HomeController@map')->name('map')->middleware('can:map');

@@ -45,4 +45,9 @@ class HomeController extends Controller
     {
         return view('admin.cards');
     }
+
+    public function map()
+    {
+        return view('admin.map');
+    }
 }
