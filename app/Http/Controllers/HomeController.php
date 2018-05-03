@@ -59,4 +59,11 @@ class HomeController extends Controller
             'lng' => $request->lng,
         ]);
     }
+
+    public function getMarkers()
+    {
+        $markers = Marker::all();
+
+        return response()->json($markers);
+    }
 }

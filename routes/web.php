@@ -24,3 +24,4 @@ Route::get('/navbar', 'HomeController@navbar')->name('navbar')->middleware('can:
 Route::get('/cards', 'HomeController@cards')->name('cards')->middleware('can:components');
 Route::get('/map', 'HomeController@map')->name('map')->middleware('can:map');
 Route::get('/store-marker', 'HomeController@storeMarker')->name('marker')->middleware('can:map');
+Route::get('/get-markers', 'HomeController@getMarkers')->name('get-markers')->middleware('can:map');

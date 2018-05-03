@@ -24,6 +24,8 @@
     map.addListener('click', function(e) {
       placeMarkerAndPanTo(e.latLng, map);
     });
+
+    getMarkers();
   }
 
   function placeMarkerAndPanTo(latLng, map) {
@@ -41,6 +43,15 @@
       }
     }).done(function (msg) {
       console.log("Marker saved");
+    });
+  }
+
+  function getMarkers() {
+    $.ajax({
+      url: '/get-markers',
+      dataType: 'json',
+    }).done(function (data) {
+      //
     });
 
   }
