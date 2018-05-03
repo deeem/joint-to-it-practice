@@ -25,7 +25,7 @@
       placeMarkerAndPanTo(e.latLng, map);
     });
 
-    getMarkers();
+    getMarkers(map);
   }
 
   function placeMarkerAndPanTo(latLng, map) {
@@ -41,19 +41,26 @@
         lat: latLng.lat(),
         lng: latLng.lng()
       }
-    }).done(function (msg) {
-      console.log("Marker saved");
     });
   }
 
-  function getMarkers() {
+  function getMarkers(map) {
     $.ajax({
       url: '/get-markers',
       dataType: 'json',
     }).done(function (data) {
-      //
+      setMarkers(data, map);
     });
+  }
 
+  function setMarkers(data, map) {
+    $.each(data, function(index, value) {
+      new google.maps.Marker({
+        position: {lat: +value.lat, lng: +value.lng},
+        map: map,
+        title: 'Hello World!'
+      });
+    });
   }
 </script>
 <script async defer
